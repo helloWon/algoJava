@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class _04_01_학급_회장 {
@@ -11,15 +12,12 @@ public class _04_01_학급_회장 {
         int cnt = Integer.parseInt(br.readLine());
         String line = br.readLine();
 
-        HashMap<String, Integer> map = new HashMap<>() {
-            {
-                put("A", 0);
-                put("B", 0);
-                put("C", 0);
-                put("D", 0);
-                put("E", 0);
-            }
-        };
+        Map<String, Integer> map = new HashMap<>(); // Avoid Compile Error at JAVA 7
+        map.put("A", 0);
+        map.put("B", 0);
+        map.put("C", 0);
+        map.put("D", 0);
+        map.put("E", 0);
 
         for (int i = 0; i < cnt; i++) {
             String key = String.valueOf(line.charAt(i));
