@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class _06_03_삽입정렬 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int cnt = Integer.parseInt(br.readLine());
+        Integer.parseInt(br.readLine());
         int[] arr = Arrays.stream(br.readLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         for (int i = 1; i < arr.length; i++) {
