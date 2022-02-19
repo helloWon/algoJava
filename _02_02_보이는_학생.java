@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class _02_02_보이는_학생 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int cnt = Integer.parseInt(br.readLine());
+        Integer.parseInt(br.readLine());
         int[] students = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         int max = 0;
