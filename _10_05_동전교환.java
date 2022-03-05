@@ -5,8 +5,6 @@ import java.util.Arrays;
 
 public class _10_05_동전교환 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        // 냅색 알고리즘
-        // dy[i]: i 금액을 만드는데 드는 최소 동전 개수
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int cnt = Integer.parseInt(br.readLine());
         int[] coins = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
