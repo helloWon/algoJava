@@ -4,6 +4,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 냅색 알고리즘
+ */
 public class _10_06_최대점수_구하기 {
 
     public static void main(String[] args) throws IOException {

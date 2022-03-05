@@ -25,7 +25,7 @@ public class _08_07_조합의_경우수_메모이제이션 {
         }
     }
 
-    private static int dfs0(int n, int r) {
+    private static int dfs0(int n, int r) { // 시간초과
         if (n == r || r == 0)
             return 1;
         else
