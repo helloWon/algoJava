@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 public class _01_12_암호 {
     public static void main(String[] args) throws IOException {
@@ -10,14 +8,23 @@ public class _01_12_암호 {
         Integer.parseInt(br.readLine());
         String[] input = br.readLine().split("");
 
-        String word;
+        String word = "";
         int num;
         String ans = "";
-        for (int i = 0; i < input.length; i+=7) {
-            word = Arrays.stream(input).skip(i).limit(7).collect(Collectors.joining());
-            word = word.replaceAll("#", "1").replaceAll("\\*", "0");
-            num =  Integer.parseInt(word, 2);
-            ans += (char) num;
+        for (int i = 0; i < input.length; ++i) {
+            switch (input[i]) {
+                case "#":
+                    word += "1";
+                    break;
+                case "*":
+                    word += "0";
+                    break;
+            }
+            if (word.length() == 7) {
+                num = Integer.parseInt(word, 2);
+                ans += (char) num;
+                word = "";  // word 초기화
+            }
         }
         System.out.println(ans);
     }
